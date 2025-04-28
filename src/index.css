@@ -70,6 +70,10 @@ select {
 b {
   font-weight: bold;
 }
+a,
+a:visited {
+  color: var(--color-text-co);
+}
 svg {
   --size: 1em;
   height: var(--size);

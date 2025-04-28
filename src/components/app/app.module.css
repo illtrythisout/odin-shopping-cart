@@ -1,0 +1,34 @@
+.navBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--default-padding);
+
+  padding: var(--default-padding) calc(var(--default-padding) * 2);
+  background-color: var(--color-primary);
+}
+.links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--default-padding);
+}
+.logo {
+  composes: links;
+
+  --font-size: 2em;
+  font-size: var(--font-size);
+}
+
+.content {
+  min-height: calc(
+    100lvh - (4 * var(--default-padding)) - 3rem - 1.5rem
+  ); /* (screen height) - (padding on nav and footer) - (logo text height = 1.5 * font-size) - (footer text height) */
+}
+
+.footer {
+  color: var(--color-canvas);
+  text-align: center;
+  padding: var(--default-padding) calc(var(--default-padding) * 2);
+  background-color: var(--color-primary-darker);
+}
