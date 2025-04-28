@@ -1,0 +1,6 @@
+.home {
+  composes: content from '../app/app.module.css';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
