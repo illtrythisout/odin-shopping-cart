@@ -1,0 +1,32 @@
+.page {
+  --font-size: 1.3em;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5lvh;
+
+  height: 100lvh;
+}
+.title {
+  font-size: 25lvh;
+  line-height: 20lvh;
+}
+.text {
+  font-size: var(--font-size);
+}
+.button {
+  --font-size: 1em;
+
+  padding: calc(var(--font-size) / 2) var(--font-size);
+
+  font-size: var(--font-size);
+
+  border-radius: 100vh;
+  border: none;
+  background-color: var(--color-primary);
+}
+.button * {
+  color: var(--color-canvas);
+}
