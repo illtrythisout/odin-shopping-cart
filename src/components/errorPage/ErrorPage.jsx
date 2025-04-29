@@ -8,7 +8,7 @@ export default function ErrorPage() {
       <p className={styles.text}>
         Oops, it looks like the page you are looking for does not exist
       </p>
-      <button className={styles.button}>
+      <button>
         <Link to="/" className="link">
           Go back home
         </Link>
