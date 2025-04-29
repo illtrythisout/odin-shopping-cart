@@ -7,12 +7,11 @@ export const CartContext = createContext();
 export default function App() {
   const [itemsInCart, setItemsInCart] = useState([]);
   function addItemToCart(item, count) {
-    console.log(itemsInCart);
     setItemsInCart([...itemsInCart, { item: item, count: count }]);
   }
 
   return (
-    <CartContext.Provider value={{ addItemToCart }}>
+    <CartContext.Provider value={{ addItemToCart, itemsInCart }}>
       <main>
         <nav className={styles.navBar}>
           <Link to="/" className={styles.logo}>
