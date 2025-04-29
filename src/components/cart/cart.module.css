@@ -1,0 +1,18 @@
+.item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--default-padding);
+
+  padding: var(--default-padding);
+
+  background-color: white;
+  border-radius: var(--default-border-radius);
+  box-shadow: var(--default-box-shadow);
+}
+.purchaseActions {
+  display: flex;
+  gap: calc(var(--default-padding) / 2);
+}
+.purchaseActions input {
+  flex: 1;
+}

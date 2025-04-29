@@ -1,0 +1,15 @@
+.item {
+  display: flex;
+  gap: var(--default-padding);
+  justify-content: space-between;
+  align-items: center;
+
+  padding: var(--default-padding);
+
+  background-color: white;
+  border-radius: var(--default-border-radius);
+  box-shadow: var(--default-box-shadow);
+}
+.image {
+  max-height: 20lvh;
+}
