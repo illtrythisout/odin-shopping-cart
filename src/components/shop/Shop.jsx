@@ -1,6 +1,7 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import styles from './shop.module.css';
 import ShopItem from '../shopItem/ShopItem';
+import { CartContext } from '../app/App';
 
 function useItems() {
   const [items, setItems] = useState([]);
@@ -25,6 +26,7 @@ function useItems() {
 
 export default function Shop() {
   const { items, error, loading } = useItems();
+  const { addItemToCart } = useContext(CartContext);
 
   if (loading) return <h1>Loading...</h1>;
   if (error) return <h1>A network error was encountered</h1>;
@@ -34,8 +36,9 @@ export default function Shop() {
       <h1>Browse the following items</h1>
       <div className={styles.items}>
         {items.map((item) => {
-          // console.log(item);
-          return <ShopItem key={item.id} item={item} />;
+          return (
+            <ShopItem key={item.id} item={item} addItemToCart={addItemToCart} />
+          );
         })}
       </div>
     </div>
