@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import styles from './shop.module.css';
+import ShopItem from '../shopItem/ShopItem';
 
 function useItems() {
   const [items, setItems] = useState([]);
@@ -33,7 +34,8 @@ export default function Shop() {
       <h1>Browse the following items</h1>
       <div className={styles.items}>
         {items.map((item) => {
-          return <p>{item.title}</p>;
+          // console.log(item);
+          return <ShopItem key={item.id} item={item} />;
         })}
       </div>
     </div>
